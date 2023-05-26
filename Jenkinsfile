@@ -6,9 +6,9 @@ node {
         git "https://github.com/javahometech/my-app"
     }
     
-    state('building'){
+#    state('building'){
         
-        mvn clean package
-    }
+ #       mvn clean package
+  #  }
     
 }
