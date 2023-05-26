@@ -8,7 +8,7 @@ node {
     
     stage('building'){
         
-        mvn clean package
+        mvn clean 
     }
     
 }
