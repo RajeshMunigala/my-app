@@ -1,18 +1,15 @@
 node {
     
-     tools {
-    maven 'maven3'
-  }
-    
-    stage('checkout'){
+    stage('scm-checkout'){
         
         echo "Git checkout"
         git "https://github.com/javahometech/my-app"
     }
     
-    stage('building'){
+    stage('compile-build'){
         
-        sh "mvn clean package"
+        def mvnHome = tool name: 'maven-3', type: 'maven'
+        sh "${mvnHome}/bin/mvn clean package"
     }
     
 }
