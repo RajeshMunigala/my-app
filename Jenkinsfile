@@ -1,5 +1,9 @@
 node {
     
+     tools {
+    maven 'maven3'
+  }
+    
     stage('checkout'){
         
         echo "Git checkout"
